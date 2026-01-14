@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ירידה במשקל</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="burger-layer" aria-hidden="true"></div>
+
+  <h1 class="big-title" id="mainTitle"></h1>
+
+  <div class="container">
+    <h2<h2>מה לאכול וכמה?</h2>
+<p class="subtitle">בחר פרטים וקבל יעד קלוריות לירידה במשקל</p>
+
+<label class="lbl">מין</label>
+<select id="sex">
+  <option value="male">גבר</option>
+  <option value="female">אישה</option>
+</select>
+
+<label class="lbl">גיל</label>
+<input type="number" id="age" placeholder="לדוגמה: 28" min="10" max="120" />
+
+<label class="lbl">גובה (ס״מ)</label>
+<input type="number" id="height" placeholder="לדוגמה: 175" min="100" max="230" />
+
+<label class="lbl">משקל (ק״ג)</label>
+<input type="number" id="weight" placeholder="לדוגמה: 70" min="30" max="300" />
+
+<label class="lbl">רמת פעילות</label>
+<select id="activity">
+  <option value="1.2">יושבני (מעט תנועה)</option>
+  <option value="1.375">קל (1–3 אימונים בשבוע)</option>
+  <option value="1.55" selected>בינוני (3–5 אימונים בשבוע)</option>
+  <option value="1.725">גבוה (6–7 אימונים בשבוע)</option>
+  <option value="1.9">ספורטאי/ת (מאוד גבוה)</option>
+</select>
+
+<button onclick="calculate()">חשב</button>
+
+<div id="result" class="result"></div>
+h2>
+    <p class="subtitle">הכנס משקל וקבל המלצה יומית</p>
+
+    <input type="number" id="weight" placeholder="משקל בק״ג" />
+    <button onclick="calculate()">חשב</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
