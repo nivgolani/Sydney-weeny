@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ירידה במשקל</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="burger-layer" aria-hidden="true"></div>
+
+  <h1 class="big-title" id="mainTitle"></h1>
+
+  <div class="container">
+    <h2<h2>מה לאכול וכמה?</h2>
+<p class="subtitle">בחר פרטים וקבל יעד קלוריות לירידה במשקל</p>
+
+<label class="lbl">מין</label>
+<select id="sex">
+  <option value="male">גבר</option>
+  <option value="female">אישה</option>
+</select>
+
+<label class="lbl">גיל</label>
+<input type="number" id="age" placeholder="לדוגמה: 28" min="10" max="120" />
+
+<label class="lbl">גובה (ס״מ)</label>
+<input type="number" id="height" placeholder="לדוגמה: 175" min="100" max="230" />
+
+<label class="lbl">משקל (ק״ג)</label>
+<input type="number" id="weight" placeholder="לדוגמה: 70" min="30" max="300" />
+
+<label class="lbl">רמת פעילות</label>
+<select id="activity">
+  <option value="1.2">יושבני (מעט תנועה)</option>
+  <option value="1.375">קל (1–3 אימונים בשבוע)</option>
+  <option value="1.55" selected>בינוני (3–5 אימונים בשבוע)</option>
+  <option value="1.725">גבוה (6–7 אימונים בשבוע)</option>
+  <option value="1.9">ספורטאי/ת (מאוד גבוה)</option>
+</select>
+
+<button onclick="calculate()">חשב</button>
+
+<div id="result" class="result"></div>
+h2>
+    <p class="subtitle">הכנס משקל וקבל המלצה יומית</p>
+
+    <input type="number" id="weight" placeholder="משקל בק״ג" />
+    <button onclick="calculate()">חשב</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<hr style="margin:20px 0">
+
+<h3>מה אתה א<hr class="sep">
+
+<h3 class="section-title">מה אתה אוהב לאכול?</h3>
+
+<div class="form-grid">
+
+  <div class="field">
+    <label class="lbl">חלבון</label>
+    <select id="proteinSelect">
+      <option value="" selected disabled>בחר חלבון</option>
+      <option value="עוף">עוף</option>
+      <option value="בקר">בקר</option>
+      <option value="דגים">דגים</option>
+      <option value="ביצים">ביצים</option>
+      <option value="טופו">טופו</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label class="lbl">תוספת פחמימה</label>
+    <select id="carbSelect">
+      <option value="" selected disabled>בחר פחמימה</option>
+      <option value="אורז">אורז</option>
+      <option value="פסטה">פסטה</option>
+      <option value="תפוחי אדמה">תפוחי אדמה</option>
+      <option value="קינואה">קינואה</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label class="lbl">ירקות</label>
+    <select id="vegSelect">
+      <option value="" selected disabled>בחר ירקות</option>
+      <option value="ברוקולי">ברוקולי</option>
+      <option value="סלט ירוק">סלט ירוק</option>
+      <option value="קישואים">קישואים</option>
+      <option value="גזר">גזר</option>
+    </select>
+  </div>
+
+</div>
+
+<button onclick="buildWeeklyMenu()" class="btn-secondary">בנה לי תפריט שבועי</button>
+
+<div id="weeklyMenu" class="weekly"></div>
+והב לאכול?</h3>
+
+<div class="box">
+  <strong>בחר חלבון</strong>
+  <label><input type="checkbox" value="עוף" class="protein"> עוף</label>
+  <label><input type="checkbox" value="בקר" class="protein"> בקר</label>
+  <label><input type="checkbox" value="דגים" class="protein"> דגים</label>
+  <label><input type="checkbox" value="ביצים" class="protein"> ביצים</label>
+  <label><input type="checkbox" value="טופו" class="protein"> טופו</label>
+</div>
+
+<div class="box">
+  <strong>בחר פחמימה</strong>
+  <label><input type="checkbox" value="אורז" class="carb"> אורז</label>
+  <label><input type="checkbox" value="פסטה" class="carb"> פסטה</label>
+  <label><input type="checkbox" value="תפוחי אדמה" class="carb"> תפוחי אדמה</label>
+  <label><input type="checkbox" value="קינואה" class="carb"> קינואה</label>
+</div>
+
+<div class="box">
+  <strong>בחר ירקות</strong>
+  <label><input type="checkbox" value="ברוקולי" class="veg"> ברוקולי</label>
+  <label><input type="checkbox" value="סלט ירוק" class="veg"> סלט ירוק</label>
+  <label><input type="checkbox" value="קישואים" class="veg"> קישואים</label>
+  <label><input type="checkbox" value="גזר" class="veg"> גזר</label>
+</div>
+
+<button onclick="buildWeeklyMenu()">בנה לי תפריט שבועי</button>
+
+<div id="weeklyMenu" class="weekly"></div>
+<div id="rotating-text-bg" aria-hidden="true"></div>
